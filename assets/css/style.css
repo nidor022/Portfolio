@@ -211,7 +211,7 @@ html, body {
 /* HERO
 ================================================== */
 .hero { 
-    background: url(../img/hero.jpg) no-repeat center / cover; 
+    background: white no-repeat center / cover; 
     height: 100%;
     width: 100%;
     min-height: 700px;
@@ -290,26 +290,14 @@ html, body {
     padding-bottom: 120px;
 }
 
-.skill + .skill {
-    margin-top: 50px;
-}
-
 .skill h4 {
     font-size: 24px;
     text-transform: uppercase;
     margin: 0 0 15px;
 }
 
-.progress {
-    height: 15px;
-    margin-bottom: 0;
-    border-radius: 0;
-    background-color: #dfdfdf;
-    box-shadow: none;
-}
-
-.progress-bar {
-    background-color: #212121;  
+.skill .img-lines {
+    margin: 10px;
 }
 
 /* Section: Services */
@@ -369,7 +357,7 @@ html, body {
     position: relative;
 }
 
-.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
+.section-portfolio .col-md-4:nth-last-child(-n+) .portfolio-item {
     margin-bottom: 0;
 }
 
