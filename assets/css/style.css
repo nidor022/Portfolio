@@ -363,6 +363,75 @@ html, body {
     margin-bottom: 0;
 }
 
+#one {
+    width: 300px;
+    height: 300px;
+}
+
+#two {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+#three {
+    height: 300px;
+    margin-left: 80px;
+}
+
+#four {
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+#five {
+    height: 200px;
+    width: 300px;
+    margin-top: 90px;
+}
+
+#six {
+    width: 210px;
+    height: 300px;
+    margin-left: 70px;
+    margin-top: 70px;
+}
+
+#seven {
+    width: 300px;
+    margin-top: 90px;
+}
+
+#eight {
+    width: 300px;
+    height: 200px;
+    margin-top: 80px;
+}
+
+#nine {
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+#ten {
+    width: 300px;
+    height: 300px;
+}
+
+#eleven {
+    width: 300px;
+    height: 200px;
+    margin-top: 60px;
+}
+
+#twelve {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+}
+
 .portfolio-item:before {
     content: '';
     height: 100%;
