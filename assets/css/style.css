@@ -539,6 +539,10 @@ html, body {
     font-weight: 700;
 }
 
+.modal-body {
+    text-align: center;
+}
+
 .modal-footer {
     text-align: center;
 }
@@ -546,6 +550,7 @@ html, body {
 #blogin, #bfileboard, #bserviceboard {
     width: 80%;
 }
+
 
 
 /* Section: Counters */
