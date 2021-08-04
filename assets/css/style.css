@@ -543,6 +543,11 @@ html, body {
     text-align: center;
 }
 
+#blogin, #bfileboard, #bserviceboard {
+    width: 80%;
+}
+
+
 /* Section: Counters */
 .section-counters {
     background: url(../img/counters-bg.jpg) no-repeat fixed center / cover;
