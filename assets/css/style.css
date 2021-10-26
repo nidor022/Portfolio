@@ -543,6 +543,10 @@ html, body {
     text-align: center;
 }
 
+.modal-body img { 
+    width: 100%;
+}
+
 .modal-footer {
     text-align: center;
 }
