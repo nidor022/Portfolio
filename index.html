@@ -1,310 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Basic Page Needs
-    ================================================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>PortfolioPerfect</title>
-
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-
-    <!-- Favicon
-    ================================================== -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png"> -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
-
-    <!-- Stylesheets
-    ================================================== -->
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>포트폴리오</title>
+	<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+	<link href="css/styles.css" rel="stylesheet" />
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="sb-nav-fixed">
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+		<!-- Navbar Brand-->
+		<a class="navbar-brand ps-3" href="index.html">이루리의 포트폴리오</a>
+		<!-- Sidebar Toggle-->
+		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+		<!-- Navbar Search-->
+		<!-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+			<div class="input-group">
+				<input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+				<button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+			</div>
+		</form> -->
+		<!-- Navbar-->
+		<!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="#!"></a></li>
+					<li><a class="dropdown-item" href="#!">Activity Log</a></li>
+					<li><hr class="dropdown-divider" /></li>
+					<li><a class="dropdown-item" href="#!">Logout</a></li>
+				</ul>
+			</li>
+		</ul> -->
+	</nav>
+	<div id="layoutSidenav">
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+				<div class="sb-sidenav-menu">
+					<div class="nav">
+						<div class="sb-sidenav-menu-heading">skills</div>
+						<!-- <a class="nav-link" href="index.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+							Dashboard
+						</a> -->
+						<a class="nav-link" href="index.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+							Skills
+						</a>
 
-    <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);" data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
-        <nav id="primary-navigation" class="site-navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
+						<!-- <div class="sb-sidenav-menu-heading">Interface</div>
+						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+							<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+							Layouts
+							<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+						</a>
+						<div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="layout-static.html">Static Navigation</a>
+								<a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+							</nav>
+						</div>
 
-                    <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse" aria-expanded="false" >
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    
-                    <!-- <a href="#hero" class="site-logo"><img src="assets/img/logo.png" alt="logo"></a> -->
-                    <a href="#hero" class="site-logo"><h1>HOME</h1></a>
+						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+							<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+							Pages
+							<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+						</a>
+						<div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+								<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+									Authentication
+									<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+								</a>
+								<div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+									<nav class="sb-sidenav-menu-nested nav">
+										<a class="nav-link" href="login.html">Login</a>
+										<a class="nav-link" href="register.html">Register</a>
+										<a class="nav-link" href="password.html">Forgot Password</a>
+									</nav>
+								</div>
+								<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+									Error
+									<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+								</a>
+								<div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+									<nav class="sb-sidenav-menu-nested nav">
+										<a class="nav-link" href="401.html">401 Page</a>
+										<a class="nav-link" href="404.html">404 Page</a>
+										<a class="nav-link" href="500.html">500 Page</a>
+									</nav>
+								</div>
+							</nav>
+						</div>
 
-
-                </div><!-- /.navbar-header -->
-
-                <div class="main-menu" id="portfolio-perfect-collapse">
-
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <li class="page-scroll"><a href="#hero">Home</a></li>
-                        <li class="page-scroll"><a href="#skills">skills</a></li>
-                        <li class="page-scroll"><a href="#portfolio">Portfolio</a></li>
-                        
-                    </ul><!-- /.navbar-nav -->
-
-                </div><!-- /.navbar-collapse -->
-
-            </div>
-        </nav><!-- /.primary-navigation -->
-    </header><!-- /#header -->
-
-    <div id="hero" class="hero">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-6">
-                    <h1>포트폴리오</h1>
-                    <div class="page-scroll">
-                        <p class="job-title"></p>
-                        <!-- <a href="#contact" class="btn btn-fill ">Hire me</a> -->
-                        <div class="clearfix visible-xxs"></div>
-                        <a href="#portfolio" class="btn btn-border">Explore more</a>
-                    </div>
-                </div>
-            
-                <div class="col-md-6 text-right">
-                    <img src="assets/img/code.jpg" alt="alex-vidal">
-                </div>
-
-            </div>
-        </div>
-    </div><!-- /.hero -->
-
-    <main id="main" class="site-main">
-
-      <section id="service" class="site-section section-services overlay text-center">
-      </section><!-- /.secton-services -->
-
-        <section id="skills" class="site-section section-skills">
-            <div class="container">
-                <div class="text-center">
-                    <h3>My Skills</h3>
-                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="skill">
-                                <img src="assets/img/java.jpg" id="one" class="img-lines" alt="lines">
-                        </div><!-- /.skill -->
-                        <div class="skill">
-                                <img src="assets/img/javascript.jpg" id="two" class="img-lines" alt="lines">
-                        </div><!-- /.skill -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                                <img src="assets/img/jsp.png" id="three" class="img-lines" alt="lines">
-                        </div><!-- /.skill -->
-                        <div class="skill">
-                                <img src="assets/img/html.png" id="four" class="img-lines" alt="lines">
-                        </div><!-- /.skill -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                                <img src="assets/img/androidstudio.png" id="five" class="img-lines" alt="lines">   
-                        </div><!-- /.skill -->
-                        <div class="skill">
-                                <img src="assets/img/css.png" id="six" class="img-lines" alt="lines">
-                        </div><!-- /.skill -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                                <img src="assets/img/springboot.png" id="seven" class="img-lines" alt="lines">   
-                        </div><!-- /.skill -->
-                        <div class="skill">
-                          <img src="assets/img/mysql.png" id="eight" class="img-lines" alt="lines">
-                        </div><!-- /.skill -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                          <img src="assets/img/vuejs.jpg" id="twelve" class="img-lines" alt="lines">
-                        </div><!-- /.skill -->
-
-                        <div class="skill">
-                          <img src="assets/img/oracle.png" id="ten" class="img-lines" alt="lines">
-                         </div><!-- /.skill -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                                <img src="assets/img/ajax.png" id="eleven" class="img-lines" alt="lines">   
-                        </div><!-- /.skill -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                                <img src="assets/img/postgresql.png" id="eleven" class="img-lines" alt="lines">   
-                        </div><!-- /.skill -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                                <img src="assets/img/linux.png" id="eleven" class="img-lines" alt="lines">   
-                        </div><!-- /.skill -->
-                    </div>
-                </div>
-            </div>
-        </section><!-- /.secton-skills -->
-
-        <section id="portfolio" class="site-section section-portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h3>Works</h3>
-                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/buenomain.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>밀키트 프로젝트</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://github.com/nidor022/mealkit" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/travelmain(1).jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>숙박시설 예약사이트</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://github.com/nidor022/spring_travel" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    
-                </div>
-            </div>
-        </section><!-- /.secton-portfolio -->
-
-
-    </main><!-- /#main -->
-
-    <footer id="colophon" class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-xs-12">
-                    <a class="icon facebook-bg" href="#"><i class="icon-facebook"></i></a>
-                    <a class="icon twitter-bg" href="#"><i class="icon-twitter"></i></a>
-                    <a class="icon gplus-bg" href="#"><i class="icon-linkedin"></i></a>
-                    <a class="icon linkedin-bg" href="#"><i class="icon-gplus"></i></a>
-                </div>
-                <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3"><p class="copyright">2017. All Rights Reserved</p></div>
-                <div class="col-sm-4 col-xs-3">
-                    <div class="text-right page-scroll">
-                        <a class="icon icon-up-bg" href="#hero"><i class="icon-up"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer><!-- /#footer -->
-
-    <!-- Modals -->
-    <div id="portfolioItem1" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-            <img class="img-res" src="assets/img/buenomain.jpg" alt="">
-          </div>
-          <div class="modal-body">
-            <h4 class="modal-title">밀키트 프로젝트</h4>
-            <p> 메이븐 프로젝트로 구현한 MVC(모델2) 밀키트 사이트. 비회원, 회원 장바구니 구매 등록, 회원가입 등 기능</p>
-            <p>팀 프로젝트로 로그인 기능, 회원 비회원 주문자 정보 불러오기, 카카오 페이 API를 통한 결제기능과 주문후 구매내역 페이지 리스트, 구매정보 확인기능 구현을 담당</p>
-            <p>DB는 Mysql을 사용</p>
-              <img src="assets/img/userjoin.jpg" alt=""><p>회원가입</p><br>
-              <img src="assets/img/userlogin.jpg" alt="" id="blogin"><p>회원로그인</p><br>
-              <img src="assets/img/foodcategory.jpg" alt=""><p>주문가능한 카테고리</p><br>
-              <img src="assets/img/mealkitList.jpg" alt=""><p>음식 리스트</p><br>
-              <img src="assets/img/cart.jpg" alt=""><p>회원, 비회원 장바구니 담기</p><br>
-              <img src="assets/img/order.jpg" alt=""><p>주문정보 입력</p><br>
-              <img src="assets/img/pay.jpg" alt=""><p>카카오 페이 결제방식</p><br>
-              <img src="assets/img/orderlist.jpg" alt=""><p>주문후 혹은 구매내역 페이지에서 구매정보 확인. 비회원은 주문번호로 구매정보 확인</p><br>
-              <img src="assets/img/fileboard.jpg" alt="" id="bfileboard"><p>파일게시판</p><br>
-              <img src="assets/img/serviceboard.jpg" alt="" id="bserviceboard"><p>서비스 게시판. 답글은 관리자계정만 가능하도록 구현</p>
-          </div>
-          <div class="modal-footer">
-            <a href="https://github.com/nidor022/mealkit" target="_blank" class="btn btn-fill">깃허브</a>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem2" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-            <img class="img-res" src="assets/img/travelmain(1).jpg" alt="">
-          </div>
-          <div class="modal-body">
-            <h4 class="modal-title">숙박시설 예약사이트</h4>
-            <p>숙박시설 예약사이트. 숙박시설 지도, 예약, 등록, 카카오 테스트결제 등 기능</p>
-            <p>spring boot로 구현</p>
-            <p>팀 프로젝트로 로그인, 회원가입, 메일인증, 지도 API 담당</p>
-            <p>DB는 Mysql을 사용</p>
-              <img src="assets/img/travelmain(1).jpg" alt=""><p>메인 페이지</p><br>
-              <img src="assets/img/calendar.jpg" alt="">
-              <img src="assets/img/travelmain(2).jpg" alt=""><p>현재 날짜를 기준으로 한 달력 형식 체크인,아웃 날짜 지정 기능, 지역 검색가능, 등록된 호텔정보</p><br>
-              <img src="assets/img/travelmain(3).jpg" alt=""><p>리뷰</p><br>
-              <img src="assets/img/searchpage(1).jpg" alt=""><p>검색한 정보로 생성되는 지도</p><br>
-              <img src="assets/img/searchpage(2).jpg" alt=""><p>등록된 숙박시설</p><br>
-              <img src="assets/img/searchinfo.jpg" alt=""><p>마커 클릭시 자세한 정보 띄우기</p><br>
-              <img src="assets/img/longinmodal.jpg" alt=""><p>로그인 모달창</p><br>
-              <img src="assets/img/joinmodal.jpg" alt=""><p>회원가입 모달창</p><br>
-              <img src="assets/img/faqlist.jpg" alt=""><p>faq게시판, 관리자만 글 등록 가능</p><br>
-              <img src="assets/img/qnalist.jpg" alt=""><p>qna게시판, 글쓰기는 모든회원이 가능하지만 답변은 관리자만 가능</p>
-              <img src="assets/img/userinfo.jpg" alt=""><p>회원정보 수정, 이미지 등록, 숙소 등록, 구매내역 확인, 리뷰 확인등의 기능</p>
-              <img src="assets/img/contentinfo.jpg" alt=""><p>숙박시설 세부정보 글. 결제창으로 넘어 가기전 숙소 세부정보 확인과 예약날짜 입력 가능</p> 
-              <img src="assets/img/locationpop.jpg" alt=""><p>그리고 기타 숙소글 등록기능과 등록시 지역 입력창 팝업, 그리고 카카오페이 결제 페이지등의 기능</p>
-
-          </div>
-          <div class="modal-footer">
-            <a href="https://github.com/nidor022/spring_travel" target="_blank" class="btn btn-fill">깃허브</a>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="assets/js/skrollr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
-    <script src="assets/js/jquery.countTo.min.js"></script>
-    <script src="assets/js/script.js"></script>
-  
+						<div class="sb-sidenav-menu-heading">Addons</div>
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+							Charts
+						</a>
+						<a class="nav-link" href="tables.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+							Tables
+						</a> -->
+					</div>
+				</div>
+				<!-- <div class="sb-sidenav-footer">
+					<div class="small">Logged in as:</div>
+					Start Bootstrap
+				</div> -->
+			</nav>
+		</div>
+		<div id="layoutSidenav_content">
+			<main>
+				<div class="container-fluid px-4">
+					<h1 class="mt-4">이루리</h1>
+					<ol class="breadcrumb mb-4">
+						<li class="breadcrumb-item active">Web Developer . 경력 약 3년</li>
+					</ol>
+					<section id="self-introduction" class="mt-5">
+						<h3>self-introduction</h3>
+						<div>
+							<p>- 방송통신대학 컴퓨터과학과 3학년 과정 재학중</p>
+							<p>- 2021년 부산IT학원 JAVA 프론트엔드/백엔드 과정 이수</p>
+							<p>- 2022년 1월 (주)엔에스데블 개발부서 입사</p>
+						</div>
+					</section>
+					<section id="skills" class="site-section section-skills mt-5">
+						<h3>Skills</h3>
+						<div class="sk-container">
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										JAVA
+										<!-- <span class="progress_number">89%</span> -->
+									</small>
+									<span class="progress-bar-inner" style="background-color: #838383; width: 45%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										JavaScript
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 50%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										Vue.js
+									</small>
+									<span class="progress-bar-inner" style="width: 50%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										JSP
+									</small>
+									<span class="progress-bar-inner" style="width: 30%" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										Postgresql
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 40%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										SpringBoot
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 40%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										Linux
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 30%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										HTML
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 50%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										CSS
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 50%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										Mysql
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 30%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+							<div class="progress_bar">
+								<div class="pro-bar">
+									<small class="progress_bar_title">
+										Oracle
+									</small>
+									<span class="progress-bar-inner" style="background-color: #222222; width: 30%;" data-value="50" data-percentage-value="89"></span>
+								</div>
+							</div>
+						</div>
+					</section><!-- /.secton-skills -->
+					<section id="project" class="mt-5">
+						<h3>project</h3>
+						<div>
+							<p><b>- 전문의 국가시험 문제은행 시스템 유지보수</b></p>
+							<p>설문 페이지, 응시자 자리배치 및 출력, 문항 관리 등 기능 개발 및 기타 응시자관련 버그수정</p>
+							<br/>
+							<p><b>- 의대 학부 내 문제은행 시스템 유지보수</b></p>
+							<p>기능 추가, 개선 및 버그 수정 (설문, 응시자배정, 인력관리, 시험 카테고리관리, 답안출력 및 보기, 문항 파일 업로드 등)</p>
+							<br/>
+							<p><b>- 바이오헬스 혁신융합대학 학사관리 시스템 개발</b></p>
+							<p>교수, 학생, 수강페이지, 관리자, 비교과, 성과플랫폼 등 학사관리 시스템 개발</p>
+							<p>교수 - 교과목, 강의, 강의평가, 출석관리, 강의 운영관리, 기자재 관리</p>
+							<p>관리자 - 학생 학적관리, 인력 관리(네이버 웨일스페이스 연동), 강의평가, 운영계획서, 기자재, 메뉴관리, </p>
+						</div>
+					</section>
+				</div>
+			</main>
+			<!-- <footer class="py-4 bg-light mt-auto">
+				<div class="container-fluid px-4">
+					<div class="d-flex align-items-center justify-content-between small">
+						<div class="text-muted">Copyright &copy; Your Website 2023</div>
+						<div>
+							<a href="#">Privacy Policy</a>
+							&middot;
+							<a href="#">Terms &amp; Conditions</a>
+						</div>
+					</div>
+				</div>
+			</footer> -->
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+	<script src="assets/demo/chart-area-demo.js"></script>
+	<script src="assets/demo/chart-bar-demo.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+	<script src="js/datatables-simple-demo.js"></script>
 </body>
+<style>
+#skills .sk-container {
+	padding: 0px 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 40%;
+}
+#skills .sk-container .skill img {
+	height: 100px;
+}
+#skills .sk-container .skill {
+	display: grid;
+	grid-template-columns: 100px 300px;
+	align-items: center;
+}
+.progress_bar .pro-bar {
+    background: hsl(0, 0%, 97%);
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1) inset;
+    height:4px;
+    margin-bottom: 12px;
+    margin-top: 50px;
+    position: relative;
+	width: 300px;
+}
+.progress_bar .progress_bar_title{
+    color: hsl(218, 4%, 50%);
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    top: -28px;
+    z-index: 1;
+}
+.progress_bar .progress_number{
+    float: right;
+    margin-top: -24px;
+}
+.progress_bar .progress-bar-inner {
+    background-color: hsl(0, 0%, 88%);
+    display: block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s linear 0s;
+}
+.progress_bar .progress-bar-inner:before {
+    content: "";
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    z-index: 1;
+}
+.progress_bar .progress-bar-inner:after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    top: -5px;
+}
+.progress_bar_title {
+	color: #838383 !important; 
+	font-weight: 700 !important;
+}
+.progress-bar-inner {
+	background-color: #838383 !important; 
+}
+</style>
 </html>
